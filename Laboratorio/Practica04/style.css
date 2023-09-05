@@ -1,0 +1,44 @@
+/* 
+  Modificando directamente al cuerpo de la pagina para
+  que tenga un margen de separación 
+*/
+body{
+    max-width: 1280px; /* Ancho maximo */
+    margin: auto;      /* Magen automatico */  
+}
+
+/* 
+  Este es el contenedor del Titulo NAVBAR
+  Era demaciado largo para la imagen que iba a contener
+*/
+.navbar-brand {
+    max-width: 100px; /* Ancho máximo para la clase navbar-brand */
+    overflow: hidden; /* Nos permite ocultar contenido que supere el ancho máximo */
+}
+
+/* 
+  Ponemos la jerarquia del contenedor que contiene la imagen del logo  
+*/
+.navbar-brand img {
+    max-width: 115%; /* La imagen se ajuste al ancho del navbar-brand */
+    height: auto;    /* Ajusta automáticamente la altura */
+}
+
+/* 
+  Clase que contiene a los nombres con link para el navbar
+*/
+.nav-link{    
+    font-size: 19px;    
+}
+/* 
+  Hacemos el hover de otro color de los links del navbar
+*/
+.nav-link:hover{
+    color: rgb(15, 206, 219);
+}
+/* 
+  Hacemos el hover de otro color de los items del menú despegable
+*/
+.dropdown-item:hover{
+    color: rgb(15, 206, 219);
+}
