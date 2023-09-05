@@ -19,55 +19,104 @@
     <!-- INICIO DE BARRA NAVBARS -->
     <nav class="navbar navbar-expand-lg bg-black" data-bs-theme="dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#"> 
-            <img class="Logo" src="IMA/CienciasLOGONEG.png" alt="Texto alternativo de la imagen">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarColor01">
-            <ul class="navbar-nav me-auto">
-              <li class="nav-item">
-                <!--Se quito propiedad Activate (indicadora de pagina) -->
-                <a class="nav-link" href="#"> Inicio
-                  <span class="visually-hidden">(current)</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://getbootstrap.com/"> Boostrap </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://bootswatch.com/"> BootSwatch </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"> Información </a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"> Más </a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">Practica 01</a>
-                  <a class="dropdown-item" href="#">Practica 02</a>
-                  <a class="dropdown-item" href="#">Practica 03</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Classroom</a>
-                </div>
-              </li>
-            </ul>
-            <form class="d-flex">
-              <input class="form-control me-sm-2" type="search" placeholder="Search">
-              <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
-            </form>
-          </div>
+            <a class="navbar-brand" href="#"> 
+                <img class="Logo" src="IMA/CienciasLOGONEG.png" alt="Escudo de la facultad de Cienncias de la UNAM">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <!--Se quito propiedad Activate (indicadora de pagina) -->
+                        <a class="nav-link" href="#"> Inicio
+                            <span class="visually-hidden">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://getbootstrap.com/"> Boostrap </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://bootswatch.com/"> BootSwatch </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://bootswatch.com/lux/"> Tema </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"> Más </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Practica 01</a>
+                        <a class="dropdown-item" href="#">Practica 02</a>
+                        <a class="dropdown-item" href="#">Practica 03</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Classroom</a>
+                    </div>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-sm-2" type="search" placeholder="Buscar">
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+            </div>
         </div>
-      </nav>
-      <!-- FIN DE BARRA NAVBARS -->
+    </nav>
+    <!-- FIN DE BARRA NAVBARS -->
+
     <!-- Titulo de la vista -->
-    <h3> Listado de Categorias </h3>
+    <h3> Listado de Categorias </h3>    
 
+    <!-- INICIO Carta que contiene a la tabla -->
+    <div class="card bg-light mb-3"> 
+        <!-- div para el titulo -->
+        <div class="card-header">  </div>
+        <div class="card-body"> 
+            <!-- Tabla de las Categorias -->
+            <table class="table table-hover" style="max-width: 75rem;">
+                <thead>
+                <tr class="table-dark">
+                    <th>ID Categoria</th>
+                    <th>Código</th>
+                    <th>Categoria</th>
+                    <th>Estado</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>N</td>
+                        <td>Norte</td>
+                        <td>Activo</td>
+                    </tr> 
+                    <tr>
+                        <td>1</td>
+                        <td>N</td>
+                        <td>Norte</td>
+                        <td>Activo</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>N</td>
+                        <td>Norte</td>
+                        <td>Activo</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>S</td>
+                        <td>Sur</td>
+                        <td>Activo</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>NE</td>
+                        <td>Noroeste</td>
+                        <td>Inactivo</td>
+                    </tr>
+                    </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- FIN Carta que contiene a la tabla -->
 
-    
-    
-              
     <!-- Link de Boostrap para funciones JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>

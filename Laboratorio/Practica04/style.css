@@ -5,6 +5,7 @@
 body{
     max-width: 1280px; /* Ancho maximo */
     margin: auto;      /* Magen automatico */  
+    /*background-color: rgb(25, 25, 25); */
 }
 
 /* 
@@ -12,7 +13,7 @@ body{
   Era demaciado largo para la imagen que iba a contener
 */
 .navbar-brand {
-    max-width: 100px; /* Ancho máximo para la clase navbar-brand */
+    max-width: 120px; /* Ancho máximo para la clase navbar-brand */
     overflow: hidden; /* Nos permite ocultar contenido que supere el ancho máximo */
 }
 
@@ -30,15 +31,55 @@ body{
 .nav-link{    
     font-size: 19px;    
 }
+
 /* 
   Hacemos el hover de otro color de los links del navbar
 */
 .nav-link:hover{
     color: rgb(15, 206, 219);
 }
+
+/* 
+  Hacemos el hover al botón de buscar
+*/
+.btn:hover{    
+    background-color: rgb(15, 206, 219);
+}
+
+/* 
+  Centramos las opciones ocultas
+*/
+.dropdown-item{
+    text-align: center;
+}
+
 /* 
   Hacemos el hover de otro color de los items del menú despegable
 */
 .dropdown-item:hover{
     color: rgb(15, 206, 219);
+}
+
+/* 
+  Modificamo el titulo de la pagina
+*/
+h3{
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* 
+  Hacemos que el texto de la tabla este centrado
+*/
+th, td{
+    text-align: center;
+    font-size: 20px;
+}
+
+/* 
+  Tamaño maximo de la carta que contiene la tabla
+*/
+.card{
+    max-width: 1200px;
+    margin: auto;
 }
