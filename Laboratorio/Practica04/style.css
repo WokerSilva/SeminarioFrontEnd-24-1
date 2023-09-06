@@ -5,7 +5,8 @@
 body{
     max-width: 1280px; /* Ancho maximo */
     margin: auto;      /* Magen automatico */  
-    /*background-color: rgb(25, 25, 25); */
+    min-height: 100vh; /* Altura mínima de la ventana gráfica */
+    background-color: #343a40; 
 }
 
 /* 
@@ -69,6 +70,10 @@ body{
     color: rgb(15, 206, 219);
 }
 
+input.form-control{
+  color: black;
+}
+
 /* 
   Modificamo el titulo de la pagina
 */
@@ -94,7 +99,15 @@ th, td{
     margin-top: 20px;
 }
 
-.container-footer{
-  max-width: 1280px;
-  height: 30px;
+/* 
+  Regla responsiva para cuando el boton entre en la pantalla
+  Solo se alinean al centro los elementos 
+*/
+@media (max-width: 991px) {
+  .navbar-nav {
+      /* Controlando la dirección para mostrar en columna vertical */
+      flex-direction: column;
+      /* Alineando de maneral central los elementos */
+      align-items: center;
+  }
 }
