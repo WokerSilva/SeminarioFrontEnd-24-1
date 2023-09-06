@@ -86,11 +86,11 @@ th, td{
 }
 
 /* 
-  Tamaño maximo de la carta que contiene la tabla
+  Tamaño maximo de la carta que contiene la tablaz
 */
 .card{
     max-width: 1100px;
-    margin: auto;
+    margin: auto; 
     margin-top: 20px;
 }
 
