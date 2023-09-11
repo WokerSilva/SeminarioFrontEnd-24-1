@@ -12,21 +12,273 @@
 
 \newpage
 
-\section*{Introducción a CSS}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+\section{Intrdoucción al desarrollo web}
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection*{Definiciones}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Internet y la web}
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+    \item El internet (o, también, la internet) es un conjunto descentralizado
+     de redes de comunicación interconectadas que utilizan la familia de 
+     protocolos TCP/IP
+    \item Ofrece una serie de servicios, siendo la World Wide Web 
+    (o Web o WWW) el de más éxito y conocido por todos.
+\end{itemize}
+
+La Web se desarrolló entre marzo de 1989 y diciembre de 1990 por el inglés Sir Tim Berners-Lee
+con la ayuda del belga Robert Cailliau mientras trabajaban en el CERN en Ginebra, 
+Suiza. La Web nace a partir de la creación de los siguientes estándares:
 
 \begin{itemize}
-    \item CSS: Hojas de Estilo en Cascada (Cascading Style Sheets).
+    \item \textbf{HTML} (Hypertext Markup Language), se utiliza para definir la estructura
+    \item \textbf{URL}  (Uniform Resource Locator), se utiliza para referenciar recursos en la Web de forma universal.
+    \item \textbf{HTTP} (HyperText Transfer Protocol), es el protocolo de comunicación que permite las transferencias de información en la World Wide Web.
+\end{itemize}
+
+Cuando hablamos de Desarrollo Web hablamos necesariamente de \textbf{Aplicaciones Web} que
+es un posible producto resultante de esa tarea de desarrollo. Una aplicación web o, de forma abreviada, webapp, es una aplicación informática que un
+usuario puede utilizar accediendo a través de internet a un \textbf{servidor} web, y para ello hace
+uso de un \textbf{cliente} web o navegador.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Tipos de comunicación Cliente Servidor}
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+\begin{minipage}[t]{0.45\textwidth}
+    \begin{center}
+        Solicit/Response    
+
+        \begin{tabular}{c c c}
+                    & $\Rightarrow_{1}$ &  \\ 
+            Cliente &               & Servidor \\
+                    & $\Leftarrow_{2}$ &  \\ 
+        \end{tabular}
+    \end{center}
+
+    Funcionamiento: El cliente envía una solicitud al servidor, y el servidor responde con la información solicitada.
+    Ejemplo: Un navegador web (cliente) solicita una página web al servidor web. El servidor procesa la solicitud y devuelve la página web al navegador.
+\end{minipage}
+\hspace{15mm}
+\begin{minipage}[t]{0.45\textwidth}
+    \begin{center}
+        Request/Response    
+
+        \begin{tabular}{c c c}
+                    & $\Leftarrow_{1}$ &  \\                 
+            Cliente &               & Servidor \\
+                    & $\Rightarrow_{2}$ &  \\ 
+        
+        \end{tabular}
+    \end{center}
+
+    Funcionamiento: El cliente hace una petición al servidor y recibe una respuesta. 
+    Ejemplo: Una aplicación de correo electrónico (cliente) envía una petición al servidor de correo para descargar nuevos mensajes. El servidor responde con los mensajes nuevos.
+\end{minipage}
+\end{center}
+
+\vspace{3mm}
+
+\begin{center}
+    \begin{minipage}[t]{0.45\textwidth}
+        \begin{center}
+            Notification        
+    
+            \begin{tabular}{c c c}
+                        & $\Leftarrow_{1}$ &  \\                 
+                Cliente &               & Servidor                    
+            \end{tabular}
+        \end{center}
+
+        Funcionamiento: El servidor envía notificaciones o actualizaciones al cliente sin esperar una respuesta inmediata. 
+        Ejemplo: WhatsApp, puede enviar notificaciones al cliente cuando llega un nuevo mensaje, incluso si el cliente no ha solicitado activamente los nuevos mensajes.
+    \end{minipage}
+    \hspace{15mm}
+    \begin{minipage}[t]{0.45\textwidth}
+        \begin{center}
+            One-Way
+            
+            \begin{tabular}{c c c}
+                        & $\Rightarrow_{1}$ &  \\ 
+                Cliente &               & Servidor \\            
+            \end{tabular}
+        \end{center}
+
+        Funcionamiento: Comunicación unidireccional, cliente envía una solicitud al servidor sin esperar una respuesta inmediata o sin necesidad de recibir una respuesta
+        Ejemplo: En un sistema de telemetría de sensores, un sensor puede enviar datos al servidor para informar sobre las lecturas sin necesidad de que el servidor responda.
+    \end{minipage}
+\end{center}
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Frontend y Backend}
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\begin{minipage}[position]{0.40\textwidth}
+    En líneas generales, los
+    desarrolladores frontend se
+    encargan de diseñar y construir
+    los elementos con los que el
+    público tendrá contacto. Aquello
+    incluye los botones, menús,
+    páginas, enlaces, gráficos y otros
+    componentes de una página o
+    aplicación.
+\end{minipage}
+\hspace{5mm}
+\begin{minipage}[position]{0.40\textwidth}
+    El backend consiste del servidor
+    que provee la información que se
+    solicita, la aplicación que se
+    encarga de canalizarla y la base
+    de datos que organiza la
+    información. Por ejemplo, cuando
+    un cliente busca zapatos en un
+    sitio web, este interactúa con el
+    frontend.
+\end{minipage}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+\section{Intrdoucción al Frontend}
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{quote}
+El desarrollo frontend es el proceso de creación de componentes interactivos para 
+el usuario final de una aplicación web. Las interfaces de usuario, los botones, los
+datos ingresados por el usuario, las páginas web y las funciones de experiencia 
+del usuario (UX) son ejemplos de desarrollo frontend.
+\end{quote}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Objetivos}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+    \item Organizar y presentar la información, manteniéndola relevante,
+     fácil de encontrar y acceder a ella.
+    \item Lidiar con los múltiples dispositivos desde los cuales se 
+     pueden acceder a la información.    
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Ventajas del desarrollo web frontend}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+    \item Proporciona un desarrollo rápido gracias a todos los
+     frameworks e innovaciones modernas disponibles.
+    \item Las herramientas y técnicas son fáciles de aprender. La mayor
+    parte del desarrollo frontend se limita a las tres tecnologías principales que son HTML, CSS y JavaScript. 
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Desventajas del desarrollo web frontend}
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+    \item No importa cuán grande o pequeño sea un sitio web, la
+     personalización es una parte esencial. Esto nos lleva a una base de código usualmente grande.
+    \item En comparación con los lenguajes utilizados en el backend
+     como PHP y Java, que existen desde hace bastante tiempo, JavaScript es bastante nuevo.
+    \item Se lanzan versiones nuevas de bibliotecas y de los frameworks rápidamente.
+     Lidiar con actualizaciones frecuentes es complicado, con cada nueva version,
+      existe una mayor posibilidad de cometer errores y que funcionalidad previa no se encuentre soportada.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introducción a HTML}
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Definiciones}
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+    \item HTML es un lenguaje completamente independiente de la
+    plataforma. Los navegadores web reciben las páginas HTML
+    del servidor web o del almacenamiento local. Los documentos
+    recibidos luego se convierten en páginas web multimedia.
+    \item Existen varias versiones de HTML, la última versión es HTML 5    
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Ventajas}
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+    \item Es ampliamente utilizado. Es compatible con todos los navegadores.
+    \item Es fácil de aprender y utilizar.
+    \item Es increíblemente liviano y se carga rápido.
+    \item Es gratis. No es necesario comprar ningún software adicional.
+    \item Se ejecuta en cualquier navegador o sistema operativo.
+    \item Tiene una sintaxis laxa. Fácil de escribir y codificar incluso para principiantes en programación.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Desventajas}
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+    \item Es un lenguaje estático, por lo que no puede producir ningún resultado dinámico.
+    \item Crear la estructura de un documento HTML es complejo.
+    \item Incluso un pequeño error a veces puede interrumpir todo el flujo de la página web.
+    \item HTML no ofrece muchas funciones de seguridad.
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introducción a CSS}
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection*{Definiciones}
+\begin{itemize}
+    \item CSS Hojas de Estilo en Cascada (Cascading Style Sheets).
     \item Lenguaje que \textbf{maneja el diseño y presentación} de las páginas web.
     \item Los estilos \textbf{se definen una vez y se aplican a múltiples} elementos en las páginas.    
 \end{itemize}
 
 \subsection*{Sintaxis}
-\begin{tabular}{c c c c}
-    h1 & & $\{$ color: & blue; & font-size: 12px; $\}$ \\
-    $\Uparrow$ &  & $\Uparrow$ & $\Uparrow$ & $\Uparrow$ & $\Uparrow$\\
-    Selector & & Propiedad & Valor & Propiedad & Valor \\
+
+\begin{center}
+\begin{tabular}{c c c c c c}
+    h1         & & $\{$ color: & blue;      & font-size: & 12px; $\}$ \\
+    $\Uparrow$ & & $\Uparrow$  & $\Uparrow$ & $\Uparrow$ & $\Uparrow$\\
+    Selector   & & Propiedad   & Valor      & Propiedad  & Valor \\
 \end{tabular}
+\end{center}
 
 \end{document}
