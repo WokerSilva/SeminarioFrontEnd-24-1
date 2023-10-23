@@ -7,11 +7,123 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{¿Qué es JavaScript?}
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+JavaScript es un lenguaje de programación interpretado basado en texto que nos permite agregar funcionalidad avanzada a cualquier páginaweb.
+
+JavaScriptes increíblementeligero y se usa principalmenteparacrearscriptsen páginas web. También se utiliza para crear aplicacionesweb que interactúan conel cliente sin recargarla página cada vez.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Motores Javascript}
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Siemprequese ejecutaun programaJavaScript dentro del navegadorweb, el código es recibido por el motor del navegadory luego el motor lo ejecuta.
+El motor JavaScript tiene diferentes partes que nos ayudan en la ejecución del código.
+\begin{itemize}
+    \item Parser
+    \item AST
+    \item MachineCodeConversion
+    \item MachineCode
+\end{itemize}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{Fases de ejecución del códio JS}
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{enumerate}
+    \item El parser convierte los archivos de código fuente en un árbol de sintaxis abstracta (AST).
+    \item El Árbol de sintaxis se transformaa bytecode: el intérprete de V8, Ignition, genera bytecode a partir del árbol de sintaxis (este paso existe desde 2017)
+    \item El bytecode genera código de máquina: el compilador de V8, TurboFan, genera un grafo a partir del bytecode, reemplazando secciones de bytecode con código máquina altamente optimizado.
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{DOM y Javascript}
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textbf{DOM} significa \textit{Document Object Model}. El DOM es multiplataforma, independiente del lenguaje y que opera mediante la construcción de una estructura de árbol a partir del contenido HTML
+
+La API del DOMse utiliza para cambiarla interfaz que el usuariove con JavaScript. Esto se logra alterando dinamicamente HTMLy el CSS
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%
-\section{Elementos de JavaScript}
+\subsection{Elementos de JavaScript}
 %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{Variables de JavaScript}
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+    \item Un identificador, el nombre de una variable, debe comenzar con una letra ASCII mayúscula o minúscula, un signo de dólar  $ (\$) $ o un guión bajo $(_)$.    
+    \item Se puede usar números en un identificador, pero no como primer carácter.
+    \item No puede incluir espacios.
+    \item No se pueden utilizar palabras reservadas para los identificadores.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{Variables de JavaScript}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+    \begin{tabular}{ccccc}
+        abstrac      & arguments & await    & boolean    & break     \\
+        byte         & case      & catch    & char       & class     \\
+        const        & continue  & debugger & default    & delate    \\
+        do           & double    & else     & enum       & eval      \\
+        export       & extends   & FALSE    & final      & finally   \\
+        float        & for       & function & goto       & if        \\
+        implements   & import    & in       & instanceof & int       \\
+        interface    & let       & long     & native     & new       \\
+        null         & package   & private  & protected  & public    \\
+        return       & short     & static   & super      & switch    \\
+        synchronized & this      & throw    & throws     & transient \\
+        TRUE         & try       & typeof   & var        & void      \\
+        volatile     & while     & with     & yield      &          
+        \end{tabular}\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{Tipos de Datos JS}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+    \begin{minipage}{5cm}
+        \begin{tabular}{|c|}
+            \hline
+            primitive \\ \hline
+            Boolean \\
+            Null \\
+            undefined \\
+            Number \\
+            String \\
+            Symbol \\ \hline        
+        \end{tabular}    
+    \end{minipage}
+    \begin{minipage}[c]{5cm}
+        \begin{tabular}{|c|}
+            \hline
+            \multicolumn{1}{|c|}{object} \\ \hline             
+            array \\
+            Object \\
+            Function \\
+            RegEx \\
+            Date \\ \hline
+        \end{tabular}
+    \end{minipage}
+\end{center}
