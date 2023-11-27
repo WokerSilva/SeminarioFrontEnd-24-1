@@ -1,0 +1,75 @@
+\documentclass[a4paper,12pt]{article} 
+\usepackage[utf8]{inputenc} % Acentos válidos sin problemas
+\usepackage[spanish]{babel} % Idioma
+\input{packet}
+
+
+\begin{document}%----------------------INICIO DOCUMENTO------------|
+%------------------------------------------------------------------|
+\input{Portada}
+
+% \tableofcontents
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%------------------------------------
+%%%%%%%%%%%%%%%%------------------------------------
+%%%%%%%%%%%%%%------------------------------------
+\section{Liga del proyecto final}
+%%%%%%%%%%%%%%------------------------------------
+%%%%%%%%%%%%%%%%------------------------------------
+%%%%%%%%%%%%%%%%%%------------------------------------
+
+
+%\begin{small}
+    \begin{verbatim}
+        Liga del Proyecto 
+    \end{verbatim}            
+%\end{small}
+
+
+
+%%%%%%%%%%%%%%%%%%------------------------------------
+%%%%%%%%%%%%%%%%------------------------------------
+%%%%%%%%%%%%%%------------------------------------
+\section{Ramas del proyecto}
+%%%%%%%%%%%%%%------------------------------------
+%%%%%%%%%%%%%%%%------------------------------------
+%%%%%%%%%%%%%%%%%%------------------------------------
+
+La rama de entrega es:
+\begin{itemize}
+    \item[]  \texttt{proyecto-dwf2024-1}
+    
+                En esta rama subiremos la versión final del proyecto 
+
+    \item[]  \texttt{proyecto/navbar}
+    
+                En esta rama haremos todos los cambios relacionados con Navbar, Sidebar y el Footer
+\end{itemize}
+
+
+
+%%%%%%%%%%%%%%%%------------------------------------
+%%%%%%%%%%%%%%------------------------------------
+\subsection{Estructura de Ramas}
+%%%%%%%%%%%%%%------------------------------------
+%%%%%%%%%%%%%%%%------------------------------------
+
+La estructura de ramas se verá de este estilo
+\begin{verbatim}
+- proyecto-dwf2024-1
+  |
+   - proyecto/navbar
+   - proyecto/<otras funciones>
+\end{verbatim}
+
+\begin{enumerate}
+    \item Cada rama que se cree debe ser tomada de \texttt{proyecto-dwf2024-1} 
+    \item El inicio debe ser \texttt{proyecto/}
+    \item Después del \texttt{../}  deberá ir un nombre acorde a lo que se va a modificar, añadir o solucionar
+\end{enumerate}
+
+Es importante solo modificar los archivos necesarios para cada rama, de esta forma hacer las integraciones resultara más sencillo 
+
+\end{document}
