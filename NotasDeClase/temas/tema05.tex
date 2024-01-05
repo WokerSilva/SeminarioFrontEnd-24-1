@@ -5,3 +5,117 @@
 %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Git es un sistema de control de versiones distribuido y gratuito.
+\begin{itemize}
+    \item Permite realizar un seguimiento de los cambios de código.
+    \item Permite crear nuevas ramas para guardar diferentes versiones del código.
+    \item Cada rama contiene un conjunto de nuevas características que se están desarrollando.
+\end{itemize}
+
+\subsection{Áreas de trabajo}
+
+En Git, el proceso de trabajo se organiza en tres áreas clave: el directorio de trabajo (working
+ directory), el área de preparación (staging area), y el repositorio (repository). Cada área 
+ cumple un papel específico en la gestión y seguimiento de los cambios en el código.
+
+\begin{itemize}
+    \item Working directory
+    \begin{itemize}
+        \item En esta área, se lleva a cabo todo el trabajo activo de creación, modificación, eliminación y organización de archivos y código.
+        \item Los cambios realizados en el working directory no se registran automáticamente en el repositorio, lo que brinda flexibilidad para experimentar y probar cambios antes de confirmarlos.
+    \end{itemize}
+    \begin{lstlisting}[style=bashstyle]
+        # Crear un nuevo archivo en el directorio de trabajo
+        touch nuevo_archivo.txt
+        
+        # Modificar el archivo existente
+        nano nuevo_archivo.txt
+    \end{lstlisting}
+
+    \item Staging area
+    \begin{itemize}
+        \item En esta etapa, se seleccionan y preparan los cambios específicos del working directory que se desean incluir en el próximo commit.
+        \item La staging area actúa como un espacio intermedio donde se pueden revisar y ajustar los cambios antes de confirmarlos en el repositorio.
+    \end{itemize}
+    \begin{lstlisting}[style=bashstyle]        
+        # Agregar cambios al area de preparacion
+        git add nuevo_archivo.txt        
+    \end{lstlisting}
+
+
+    \item Repository
+    \begin{itemize}
+        \item Aquí es donde se almacenan permanentemente los cambios confirmados, incluyendo código, imágenes, logs, y demás.
+        \item Cada confirmación (commit) en el repositorio tiene un historial que permite rastrear el progreso del proyecto y revertir a versiones anteriores si es necesario.
+    \end{itemize}
+    \begin{lstlisting}[style=bashstyle]        
+        # Confirmar los cambios en el repositorio
+        git commit -m "Actualizar nuevo archivo"
+    \end{lstlisting}
+\end{itemize}
+
+\subsection{Ramas}
+
+En Git, las ramas son un concepto esencial que permite crear entornos de trabajo independientes 
+dentro de un proyecto. Se pueden interpretar como solicitudes para establecer nuevos contextos 
+o versiones del proyecto, cada una enfocada en el desarrollo de conjuntos específicos de características.
+
+Cada rama representa una línea de desarrollo separada, con su propio conjunto de 
+cambios y actualizaciones. Este enfoque brinda la flexibilidad de trabajar en nuevas 
+funcionalidades o correcciones sin afectar directamente la rama principal del proyecto. 
+La rama predeterminada en Git se denomina \textit{master}, y es la línea base desde la cual 
+se pueden ramificar otras versiones del código.
+
+\subsubsection*{Flujo de trabajo}
+\begin{enumerate}
+    \item Crear la rama 
+    \begin{lstlisting}[style=bashstyle]
+        git branch nueva-funcionalidad-rama
+    \end{lstlisting}
+
+    \item Cambiar a la nueva rama 
+    \begin{lstlisting}[style=bashstyle]
+        git checkout nueva-funcionalidad-rama
+    \end{lstlisting}
+
+    \item Hacer modificaciones a los archivos de las ramas
+
+    \item Agregar y confirmar cambios en la nueva rama
+    \begin{lstlisting}[style=bashstyle]
+        git add .
+        git commit -m "Agregar nueva funcionalidad"
+    \end{lstlisting}
+
+    \item Volver a la rama principal (o de donde salio la rama)
+    \begin{lstlisting}[style=bashstyle]
+        git branch master
+    \end{lstlisting}
+
+    \item Integrar la nueva funcionalidad en la rama principal
+    \begin{lstlisting}[style=bashstyle]
+        git merge nueva-funcionalidad-rama
+    \end{lstlisting}
+\end{enumerate}
+
+\subsection{Convencion de Commits}
+
+Las convenciones de commits son prácticas que ayudan a estandarizar y estructurar los mensajes de 
+confirmación (commits) en un repositorio Git. Estas convenciones facilitan la comprensión del 
+historial del proyecto y la colaboración entre desarrolladores. 
+Algunas de las convenciones comunes incluyen:\\
+
+\begin{itemize}
+    \item Se utiliza un prefijo para indicar el propósito del commit. 
+    \begin{itemize}
+        \item feat: Nueva característica.
+        \begin{lstlisting}[style=bashstyle]
+            git commit -m "feat: Agregar funcionalidad de autenticacion"
+        \end{lstlisting}
+        \item fix: Corrección de un error.
+        \item docs: Cambios en la documentación.
+        \item style: Mejoras en el formato/código (sin cambios en la lógica).
+        \item chore: Tareas de mantenimiento, refactorización, etc.
+    \end{itemize}
+\end{itemize}
